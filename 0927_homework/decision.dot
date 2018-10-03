@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="backers <= 16.5\ngini = 0.577\nsamples = 750\nvalue = [54, 385, 7, 294, 3, 7]\nclass = failed", fillcolor="#9de53933"] ;
+1 [label="usd pledged <= 615.0\ngini = 0.339\nsamples = 383\nvalue = [39, 308, 5, 23, 1, 7]\nclass = failed", fillcolor="#9de539c7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="deadline <= 781.0\ngini = 0.314\nsamples = 376\nvalue = [39, 308, 5, 23, 1, 0]\nclass = failed", fillcolor="#9de539cc"] ;
+1 -> 2 ;
+3 [label="gini = 0.296\nsamples = 371\nvalue = [39, 308, 0, 23, 1, 0]\nclass = failed", fillcolor="#9de539cf"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 5\nvalue = [0, 0, 5, 0, 0, 0]\nclass = canceled", fillcolor="#39e581ff"] ;
+2 -> 4 ;
+5 [label="gini = 0.0\nsamples = 7\nvalue = [0, 0, 0, 0, 0, 7]\nclass = suspended", fillcolor="#e5399dff"] ;
+1 -> 5 ;
+6 [label="goal <= 138.5\ngini = 0.409\nsamples = 367\nvalue = [15, 77, 2, 271, 2, 0]\nclass = undefined", fillcolor="#399de5ab"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="usd_pledged_real <= 456.5\ngini = 0.314\nsamples = 300\nvalue = [7, 46, 2, 244, 1, 0]\nclass = undefined", fillcolor="#399de5c7"] ;
+6 -> 7 ;
+8 [label="gini = 0.47\nsamples = 134\nvalue = [3, 42, 1, 88, 0, 0]\nclass = undefined", fillcolor="#399de580"] ;
+7 -> 8 ;
+9 [label="gini = 0.116\nsamples = 166\nvalue = [4, 4, 1, 156, 1, 0]\nclass = undefined", fillcolor="#399de5ef"] ;
+7 -> 9 ;
+10 [label="pledged <= 624.5\ngini = 0.609\nsamples = 67\nvalue = [8, 31, 0, 27, 1, 0]\nclass = failed", fillcolor="#9de5391a"] ;
+6 -> 10 ;
+11 [label="gini = 0.38\nsamples = 37\nvalue = [8, 28, 0, 0, 1, 0]\nclass = failed", fillcolor="#9de539b0"] ;
+10 -> 11 ;
+12 [label="gini = 0.18\nsamples = 30\nvalue = [0, 3, 0, 27, 0, 0]\nclass = undefined", fillcolor="#399de5e3"] ;
+10 -> 12 ;
+}
